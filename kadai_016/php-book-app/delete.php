@@ -14,7 +14,7 @@ try{
 
     $count = $stmt_delete->rowCount();
 
-    $message = "商品を{$count}件削除しました。 ";
+    $message = "書籍を{$count}件削除しました。 ";
 
     header("Location: read.php?message={$message}");
   }catch(PDOException $e){

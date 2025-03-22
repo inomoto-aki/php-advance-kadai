@@ -27,14 +27,14 @@ $stmt_update->bindValue(':book_code', $_POST['book_code'], PDO::PARAM_INT);
 
         $count = $stmt_update->rowCount();
 
-        $message = "商品を{$count}件編集しました。";
+        $messagr = "書籍を{$count}件編集しました。";
 
         header("Location: read.php?message={$messagr}");
   }catch(PODException $e){
     exit($e->getMessage());
   }
 }
-if(isset($_GET['id]'])){
+if(isset($_GET['id'])){
 try{
   $pdo =new PDO($dsn, $user, $password);
 
@@ -86,7 +86,7 @@ try{
     <div class="back">
     <a href="read.php" class="btn">&lt;戻る</a>
      </div>
-   <form action="create.php" method="post" class="registration-form">
+   <form action="create.php?id=<?= $_GET['id']?>" method="post" class="registration-form">
      <div>
        <label for="book_code">書籍コード</label>
        <input type="number" id="book_code" name="book_code" min="0" max="100000000" required>

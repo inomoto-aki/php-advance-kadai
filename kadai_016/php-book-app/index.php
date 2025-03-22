@@ -26,6 +26,6 @@
     </main>
     <footer>
       <p class="copyright">&copy; 書籍管理アプリAll rghts reserved.</p>
-    </footre>
+    </footer>
   </body>
 </html>

@@ -31,7 +31,7 @@ try{
   $stmt_select->execute();
 
 
-  $products = $stmt_select->fetchAll(PDO::FETCH_ASSOC);
+  $books = $stmt_select->fetchAll(PDO::FETCH_ASSOC);
 }catch (PDOException $e){
   exit($e->getMessage());
 }
@@ -42,7 +42,7 @@ try{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>書籍管理アプリ</title>
-    <link rel="stylesheet" href="css/style.css
+    <link rel="stylesheet" href="css/style.css"
     ">
 
     <!--Google Fontsの読み込み -->
@@ -74,7 +74,7 @@ try{
           </a>
           <form action="read.php" method="get" class="search-form">
             <input type="hidden" name="order" value="<?= $order ?>">
-            <input type="text" class="secrch-box" placeholder="書籍名で検索" name="keyword" value="<?= $keyword ?>">
+            <input type="text" class="seacrch-box" placeholder="書籍名で検索" name="keyword" value="<?= $keyword ?>">
           </form>
           </div>
           <a href="create.php" class="btn">書籍登録</a>

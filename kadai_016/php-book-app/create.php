@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
 
   $stmt_insert->bindValue(':book_code', $_POST['book_code'], PDO::PARAM_INT);
   $stmt_insert->bindValue(':book_name',$_POST['book_name'],PDO::PARAM_STR);
-  $stmt_insert->bindValue(':print',$_POST['print'],PDO::PARAM_INT);
+  $stmt_insert->bindValue(':price',$_POST['price'],PDO::PARAM_INT);
   $stmt_insert->bindValue(':stock_quantity',$_POST['stock_quantity'],PDO::PARAM_INT);
   $stmt_insert->bindValue(':genre_code',$_POST['genre_code'],PDO::PARAM_INT);
 
